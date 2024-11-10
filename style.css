@@ -6,13 +6,8 @@
     font-family: Arial, sans-serif;
     color: #333;
 }
-section, p {
-    display: block;
-    width: 100%;
-}
 
 body {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -50,4 +45,41 @@ a:hover {
 
 section p {
     line-height: 1.5;
+    display: block;
+    width: 100%;
+}
+
+section {
+    border: 2px dotted #333; /* 1px wide, dotted style, dark color */
+    padding: 10px;           /* Adds space inside the border for readability */
+    margin-bottom: 10px;     /* Adds space between sections */
+    border-radius: 0;
+}
+/* Grid container for sections */
+.sections-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates exactly 2 equal-width columns */
+    gap: 20px;                             /* Space between sections */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 868px) {
+    .sections-container {
+        grid-template-columns: 1fr; /* Stacks items in one column on small screens */
+    }
+}
+/* Indent list items inside sections */
+.sections-container ul {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 20px;
+}
+
+.sections-container li {
+    margin-bottom: 8px; /* Space between list items */
+    font-size: 0.9em; /* Adjust font size if necessary */
+}
+
+/* Optional: Add space below headings for a cleaner look */
+.sections-container h2 {
+    margin-bottom: 10px;
 }
