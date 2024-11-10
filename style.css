@@ -6,6 +6,12 @@
     font-family: Arial, sans-serif;
     color: #333;
 }
+.profile-pic {
+    width: 150px;            /* Set the desired width */
+    height: 150px;           /* Set the same height to make it a square */
+    border-radius: 50%;      /* This makes the image circular */
+    object-fit: cover;       /* Ensures the image fills the circle without distortion */
+}
 
 body {
     justify-content: center;
