@@ -12,7 +12,21 @@
     border-radius: 50%;      /* This makes the image circular */
     object-fit: cover;       /* Ensures the image fills the circle without distortion */
 }
+/* Styling the heart button */
+.heart-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: gray; /* Default color */
+    transition: color 0.3s;
+    margin-right: 8px;
+}
 
+/* Change heart color to red when liked */
+.heart-button.liked {
+    color: red;
+}
 body {
     justify-content: center;
     align-items: center;
