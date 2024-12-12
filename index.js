@@ -1,4 +1,3 @@
-let NumOfLikes = 0;
 const likeBtn = document.getElementById("likeButton");
 const likeCount = document.getElementById("likeCount");
 
@@ -14,18 +13,41 @@ likeBtn.onclick = function() {
         likeBtn.innerHTML = "&#9825;"; // Outlined heart
         likeBtn.setAttribute("data-liked", "false");
         likeBtn.classList.remove("liked")
-        NumOfLikes--;
-        likeCount.textContent = NumOfLikes;
+        decLikeCount();
     } else {
         likeButton.innerHTML = "&#9829;"; // Filled heart
         likeBtn.setAttribute("data-liked", "true");
         likeBtn.classList.add("liked")
-        NumOfLikes++;
-        likeCount.textContent = NumOfLikes;
+        incLikeCount();
     }
 
 }
-
+// asynchronous function to increase likes in Backend
+async function incLikeCount() {
+    try {
+        const response = await fetch('http://localhost:8080/api/likeCount/increase', {
+            method: 'PUT'
+        });
+        const data = await response.json();
+        console.log(data.msg);
+        likeCount.textContent = data.db.likeCount;
+    } catch (error) {
+        console.error('Error increasing likeCount', error);
+    }
+}
+// asynchronous function to decrease likes in Backend
+async function decLikeCount() {
+    try {
+        const response = await fetch('http://localhost:8080/api/likeCount/decrease', {
+            method: 'PUT'
+        });
+        const data = await response.json();
+        console.log(data.msg);
+        likeCount.textContent = data.db.likeCount;
+    } catch (error) {
+        console.error('Error decreasing likeCount', error);
+    }
+}
 // Asynchronous function to retrieve number of likes from Backend 
 async function getLikeCount() {
   try {
