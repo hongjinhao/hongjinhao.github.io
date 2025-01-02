@@ -1,12 +1,20 @@
+// Frontend Javascript
+
 const likeBtn = document.getElementById("likeButton");
 const likeCount = document.getElementById("likeCount");
+
+/* 
+    Paths for backend API access during development and in production
+    Development is done on vscode preview extension
+    Production is when the frontend is hosted on github io pages 
+    */
 const PRODUCTION_URL = "https://hongjinhao-github-io-backend.onrender.com";
 const DEV_URL = "http://localhost:8080";
 const BASE_URL =
   window.location.hostname === "127.0.0.1"
     ? DEV_URL
     : // if this script is running on github pages
-      "https://hongjinhao-github-io-backend.onrender.com";
+      PRODUCTION_URL;
 /*
     Interactive Like Button: Heart Shape Symbol
     When pressed, alternate between the two states: on and off. 
