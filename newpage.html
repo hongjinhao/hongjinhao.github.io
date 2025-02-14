@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="newpage.html">宁波的电话</a></li>
+      </ul>
+    </nav>
+
+    <header class="valentine-box">
+      <p class="letter-to">To: Shu Ying</p>
+      <p class="letter-from">From: Jin Hao (Alex)</p>
+      <h1>Roses are red</h1>
+      <h1>Violets are blue</h1>
+      <h1>Valentine's Day is coming, can I spend it with you?</h1>
+    </header>
+
+    <div class="response-buttons">
+      <button id="yesButton">Yes ❤️</button>
+      <button id="noButton">No 💔</button>
+    </div>
+
+    <p id="responseMessage"></p>
+    <script>
+      (function () {
+        let password = "shuying"; // Set your secret password here
+        let userInput = prompt("Enter the password to access this page:");
+
+        // Normalize user input: remove extra spaces & convert to lowercase
+        let normalizedInput = userInput
+          .toLowerCase()
+          .replace(/\s+/g, " ")
+          .trim();
+        let normalizedPassword = password
+          .toLowerCase()
+          .replace(/\s+/g, " ")
+          .trim();
+
+        if (normalizedInput !== normalizedPassword) {
+          alert("Incorrect password! Redirecting to the home page.");
+          window.location.href = "index.html"; // Redirect if wrong
+        }
+      })();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let noClickCount = 0;
+
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+        const responseMessage = document.getElementById("responseMessage");
+
+        if (!yesButton || !noButton || !responseMessage) {
+          console.error("One or more elements not found.");
+          return; // Stop execution if elements are missing
+        }
+
+        yesButton.addEventListener("click", function () {
+          responseMessage.textContent = "❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️";
+        });
+
+        noButton.addEventListener("click", function () {
+          if (noClickCount === 0) {
+            responseMessage.textContent = "I think you might have misclicked.";
+            noClickCount++;
+          } else if (noClickCount === 1) {
+            responseMessage.textContent = "Are you sure?? 🤨";
+            noClickCount++;
+          } else {
+            // Move Yes button to No button's location and remove No button
+            noButton.replaceWith(yesButton);
+            yesButton.style.marginLeft = "10px"; // Adjust spacing
+            responseMessage.textContent =
+              "I guess there's only one option now 😏";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

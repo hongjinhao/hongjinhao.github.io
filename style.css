@@ -1,105 +1,217 @@
 /* Basic Reset and Styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #333;
 }
 .profile-pic {
-    width: 150px;            /* Set the desired width */
-    height: 150px;           /* Set the same height to make it a square */
-    border-radius: 50%;      /* This makes the image circular */
-    object-fit: cover;       /* Ensures the image fills the circle without distortion */
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the same height to make it a square */
+  border-radius: 50%; /* This makes the image circular */
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
 }
 /* Styling the heart button */
 .heart-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: gray; /* Default color */
-    transition: color 0.3s;
-    margin-right: 8px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: gray; /* Default color */
+  transition: color 0.3s;
+  margin-right: 8px;
 }
 
 /* Change heart color to red when liked */
 .heart-button.liked {
-    color: red;
+  color: red;
 }
 body {
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f9;
-    padding: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+  padding: 20px;
 }
 
-header, section {
-    margin-bottom: 20px;
+header,
+section {
+  margin-bottom: 20px;
 }
 
 h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
 h2 {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 5px;
 }
 
 p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 a {
-    color: #0066cc;
-    text-decoration: none;
+  color: #0066cc;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 section p {
-    line-height: 1.5;
-    display: block;
-    width: 100%;
+  line-height: 1.5;
+  display: block;
+  width: 100%;
 }
 
 section {
-    border: 2px dotted #333; /* 1px wide, dotted style, dark color */
-    padding: 10px;           /* Adds space inside the border for readability */
-    margin-bottom: 10px;     /* Adds space between sections */
-    border-radius: 0;
+  border: 2px dotted #333; /* 1px wide, dotted style, dark color */
+  padding: 10px; /* Adds space inside the border for readability */
+  margin-bottom: 10px; /* Adds space between sections */
+  border-radius: 0;
 }
 /* Grid container for sections */
 .sections-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Creates exactly 2 equal-width columns */
-    gap: 20px;                             /* Space between sections */
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /* Creates exactly 2 equal-width columns */
+  gap: 20px; /* Space between sections */
 }
 
 /* Responsive adjustment for smaller screens */
 @media (max-width: 868px) {
-    .sections-container {
-        grid-template-columns: 1fr; /* Stacks items in one column on small screens */
-    }
+  .sections-container {
+    grid-template-columns: 1fr; /* Stacks items in one column on small screens */
+  }
 }
 /* Indent list items inside sections */
 .sections-container ul {
-    list-style-type: disc; /* Use bullet points */
-    padding-left: 20px;
+  list-style-type: disc; /* Use bullet points */
+  padding-left: 20px;
 }
 
 .sections-container li {
-    margin-bottom: 8px; /* Space between list items */
-    font-size: 0.9em; /* Adjust font size if necessary */
+  margin-bottom: 8px; /* Space between list items */
+  font-size: 0.9em; /* Adjust font size if necessary */
 }
 
 /* Optional: Add space below headings for a cleaner look */
 .sections-container h2 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.response-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  gap: 15px; /* Adds space between buttons */
+}
+
+.response-buttons button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#yesButton {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+#noButton {
+  background-color: #555;
+  color: white;
+}
+
+#responseMessage {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+
+  text-align: center;
+}
+/* Valentine's Letter Box */
+.valentine-box {
+  background-color: #ffccd5; /* Light red/pinkish color */
+  border: 2px solid #fbc1cb; /* Darker red border */
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px; /* Soft rounded corners */
+  max-width: 600px;
+  margin: 20px auto; /* Center it */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling the main text */
+.valentine-box h1 {
+  color: #c10020; /* Deep red text */
+  font-family: "Georgia", serif; /* Romantic font */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* Styling "To" and "From" */
+.letter-to,
+.letter-from {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+  color: #340005; /* Dark red for elegant feel */
+  font-family: "Georgia", serif;
+  margin-bottom: 10px;
+}
+/* Modern Navigation Bar */
+nav {
+  background-color: #333; /* Dark background for contrast */
+  padding: 15px 0;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+nav ul {
+  list-style: none;
+  margin: 10;
+  padding: 10;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px; /* Rounded edges for a softer look */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+  background-color: #ff4d6d; /* Vibrant pinkish-red on hover */
+  color: white;
+  box-shadow: 0 2px 10px rgba(255, 77, 109, 0.5);
+}
+/* Header Styling */
+header {
+  padding: 20px; /* Adds space inside the header */
+  text-align: center;
+  background-color: #f8f9fa; /* Light gray background for a clean look */
+  border-radius: 10px; /* Slightly rounded corners for a modern feel */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  margin-bottom: 20px; /* Adds space below the header */
 }

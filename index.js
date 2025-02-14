@@ -74,4 +74,4 @@ async function getLikeCount() {
   }
 }
 
-getLikeCount();
+// getLikeCount();
