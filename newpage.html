@@ -5,6 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>New Page</title>
     <link rel="stylesheet" href="style.css" />
+
+    <script>
+      // Password protection - Prevents the page from loading until the password is correct
+      (function () {
+        let password = "shuying"; // Set your secret password here
+        let userInput = prompt("Enter the password to access this page:");
+
+        // Check if user pressed "Cancel" or entered nothing
+        if (userInput === null || userInput.trim() === "") {
+          alert("You must enter a password to proceed!");
+          window.location.href = "index.html"; // Redirect if Cancel or empty input
+          return;
+        }
+
+        // Normalize user input: remove extra spaces & convert to lowercase
+        let normalizedInput = userInput
+          .toLowerCase()
+          .replace(/\s+/g, " ")
+          .trim();
+        let normalizedPassword = password
+          .toLowerCase()
+          .replace(/\s+/g, " ")
+          .trim();
+
+        if (normalizedInput !== normalizedPassword) {
+          alert("Incorrect password! Redirecting to the home page.");
+          window.location.href = "index.html"; // Redirect if wrong
+          return;
+        }
+      })();
+    </script>
   </head>
   <body>
     <nav>
@@ -28,27 +59,8 @@
     </div>
 
     <p id="responseMessage"></p>
+
     <script>
-      (function () {
-        let password = "shuying"; // Set your secret password here
-        let userInput = prompt("Enter the password to access this page:");
-
-        // Normalize user input: remove extra spaces & convert to lowercase
-        let normalizedInput = userInput
-          .toLowerCase()
-          .replace(/\s+/g, " ")
-          .trim();
-        let normalizedPassword = password
-          .toLowerCase()
-          .replace(/\s+/g, " ")
-          .trim();
-
-        if (normalizedInput !== normalizedPassword) {
-          alert("Incorrect password! Redirecting to the home page.");
-          window.location.href = "index.html"; // Redirect if wrong
-        }
-      })();
-
       document.addEventListener("DOMContentLoaded", function () {
         let noClickCount = 0;
 
