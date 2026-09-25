@@ -219,3 +219,37 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
   margin-bottom: 20px; /* Adds space below the header */
 }
+
+/* Places the profile picture to the left of the header text */
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  text-align: left;
+}
+
+.header-text {
+  text-align: left;
+}
+
+/* Vertical list for location/phone/email instead of a single | separated line */
+.contact-list {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.contact-list li {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 500px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-text {
+    text-align: center;
+  }
+}
