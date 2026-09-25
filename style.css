@@ -7,10 +7,11 @@
   color: #333;
 }
 .profile-pic {
-  width: 150px; /* Set the desired width */
-  height: 150px; /* Set the same height to make it a square */
+  width: 260px; /* Set the desired width */
+  height: 260px; /* Set the same height to make it a square */
   border-radius: 50%; /* This makes the image circular */
   object-fit: cover; /* Ensures the image fills the circle without distortion */
+  flex-shrink: 0; /* Keep the photo full-size even as the bio text grows */
 }
 /* Styling the heart button */
 .heart-button {
@@ -223,14 +224,15 @@ header {
 /* Places the profile picture to the left of the header text */
 .header-content {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
   text-align: left;
 }
 
 .header-text {
   text-align: left;
+  max-width: 600px;
 }
 
 /* Vertical list for location/phone/email instead of a single | separated line */
@@ -243,9 +245,10 @@ header {
   margin-bottom: 3px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .header-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
