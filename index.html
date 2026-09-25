@@ -1,221 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jin Hao Hong (Alex)</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <!-- Header Section -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-      </ul>
-    </nav>
-    <header>
-      <img src="pic.jpg" alt="Profile Picture" class="profile-pic" />
-      <h1>Jin Hao Hong (Alex)</h1>
-      <p>
-        Los Angeles, CA, 90007 | (213) 994-0320 |
-        <a href="mailto:jinhaoho@usc.edu">jinhaoho@usc.edu</a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/in/hongjinhao/">LinkedIn</a> |
-        <a href="https://github.com/hongjinhao">GitHub</a>
-      </p>
-      <div class="like-section">
-        <button id="likeButton" class="heart-button" data-liked="false">
-          &#9825;
-        </button>
-        <span id="likeCount">0</span> Likes
-      </div>
-    </header>
 
-    <div class="sections-container">
-      <!-- Education Section -->
-      <section>
-        <h2>Education</h2>
-        <p>
-          <strong>University of Southern California</strong>, Los Angeles,
-          California, August 2024 – December 2026
-        </p>
-        <ul>
-          <li>Master of Science in Computer Science</li>
-        </ul>
-        <p>
-          <strong>Nanyang Technological University</strong>, Singapore, August
-          2020 – May 2024
-        </p>
-        <ul>
-          <li>Honors: Highest Distinction</li>
-          <li>
-            Bachelor of Engineering in Aerospace Engineering, Second Major in
-            Business
-          </li>
-        </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jin Hao Hong (Alex)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <p>
-          <strong>University of California, Berkeley</strong>, Berkeley,
-          California, June 2023 – August 2023
-        </p>
-        <ul>
-          <li>
-            Summer Exchange Program, US-Singapore MFA Scholarship recipient
-          </li>
-        </ul>
-      </section>
-
-      <!-- Skills and Interests Section -->
-      <section>
-        <h2>Skills & Interests</h2>
-        <ul>
-          <li>
-            <strong>Programming:</strong> Python (TensorFlow, Scikit-Learn),
-            Golang, Java (Spring Boot), Bash, JavaScript (Node.js, Frontend &
-            Backend), SQL, C, and C++.
-          </li>
-          <li>
-            <strong>Web Development:</strong> HTML, CSS, RESTful APIs, Node.js
-          </li>
-          <li>
-            <strong>Software Engineering:</strong> Algorithms & Data Structures,
-            Software Design Patterns, Object-Oriented Programming (OOP),
-            Operating Systems, Networking
-          </li>
-          <li>
-            <strong>Machine Learning & AI:</strong> Supervised and Unsupervised
-            Learning, Deep Learning, Reinforcement Learning, NLP, Computer
-            Vision, Model Optimization.
-          </li>
-          <li>
-            <strong>Data Analytics & Visualization:</strong> Tableau,
-            Matplotlib, Seaborn, Power BI.
-          </li>
-          <li>
-            <strong>Tools & Platforms:</strong> Linux/Unix, Git, Docker,
-            Hardhat, VS Code, AWS (EC2)
-          </li>
-        </ul>
-      </section>
-
-      <!-- Key Accomplishments Section -->
-      <section>
-        <h2>Key Accomplishments</h2>
-
-        <p>
-          <strong>Finalist at Google x NTU Tech4tmr Hackathon</strong>, March
-          2024
-        </p>
-        <ul>
-          <li>
-            Developed a full-stack web application to assist individuals seeking
-            a career change by suggesting relevant jobs and courses, improving
-            job liquidity and workforce mobility.
-          </li>
-          <li>
-            Implemented job matching using Vertex AI for NLP, integrated web
-            scraping and external APIs to fetch and analyze data.
-          </li>
-        </ul>
-
-        <p>
-          <strong
-            >3rd Place in Friends of Amateur Rocketry 51025 Competition</strong
-          >, July 2023
-        </p>
-        <ul>
-          <li>
-            Led a team of 30 students as an engineering lead to be the first
-            Singaporean student team to launch a high-powered rocket and compete
-            in an international rocketry competition.
-          </li>
-          <li>
-            Showcased strong project management and technical skills applicable
-            in software/AI engineering roles, overcoming logistical challenges
-            and securing 3rd place.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Leadership and Involvement Section -->
-      <section>
-        <h2>Leadership and Involvement</h2>
-
-        <p>
-          <strong>Hackathons and Product Development Competitions</strong>,
-          August 2021 – March 2024
-        </p>
-        <ul>
-          <li>
-            Completed 7 hackathons and product development competitions,
-            collaborating with 40+ students from different disciplines.
-          </li>
-          <li>
-            Delivered technical presentations and effectively communicated
-            complex ideas, earning recognition for problem-solving and
-            innovation.
-          </li>
-        </ul>
-
-        <p>
-          <strong>Mechanical & Aerospace Engineering Club</strong>, August 2021
-          – August 2022
-        </p>
-        <ul>
-          <li>
-            Led a 10-member team as Business Manager Chair to raise funds,
-            liaise with sponsors, and organize merchandise sales, resulting in a
-            2x revenue increase to $20,000 and enhanced student engagement.
-          </li>
-          <li>
-            Automated order tracking and payment verification systems using
-            software tools, significantly reducing manual errors and increasing
-            operational efficiency.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Internship Experience Section -->
-      <section>
-        <h2>Internship Experience</h2>
-
-        <p>
-          <strong>NTU Satellite Research Centre</strong>, Singapore, January
-          2023 – May 2023
-        </p>
-        <ul>
-          <li><strong>Mechanical & Structural Design Intern</strong></li>
-          <li>
-            Collaborated with a 20-member international team to develop
-            engineering designs and CAD models for satellite structures in a
-            $200M satellite project.
-          </li>
-          <li>
-            Leveraged software tools for design automation, structural analysis,
-            and simulations.
-          </li>
-        </ul>
-
-        <p>
-          <strong>ST Engineering Aerospace Ltd, UAV</strong>, Singapore, May
-          2022 – August 2022
-        </p>
-        <ul>
-          <li><strong>Mechanical & Structural Design Intern</strong></li>
-          <li>
-            Designed, 3D-printed, and tested prototypes for a novel UAV drone,
-            which was presented to the Head of Department and remains in
-            development.
-          </li>
-          <li>
-            Wrote technical documentation and collaborated with software and
-            controls engineers, gaining exposure to embedded systems and UAV
-            software development.
-          </li>
-        </ul>
-      </section>
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="pic2.jpg" alt="Profile Picture" class="profile-pic" />
+    <h1>Jin Hao Hong (Alex)</h1>
+    <p>
+      Los Angeles, CA, 90007 | (213) 994-0320 |
+      <a href="mailto:jinhaoho@usc.edu">jinhaoho@usc.edu</a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/hongjinhao/">LinkedIn</a> |
+      <a href="https://github.com/hongjinhao">GitHub</a>
+    </p>
+    <!-- Like button disabled until the backend database is working again
+    <div class="like-section">
+      <button id="likeButton" class="heart-button" data-liked="false">
+        &#9825;
+      </button>
+      <span id="likeCount">0</span> Likes
     </div>
-    <script src="index.js"></script>
-  </body>
+    -->
+  </header>
+
+  <div class="sections-container">
+    <!-- About Section -->
+    <section>
+      <h2>About</h2>
+      <p>
+        I started out in aerospace engineering, not computer science,
+        working on satellite structures and UAV recovery systems at NTU
+        Singapore. A few AI and robotics projects during undergrad pulled me
+        toward software, and I came to USC for a Master's to go deeper.
+        What stuck from aerospace is a feel for computation being bounded by
+        real physical constraints, which is exactly the lens I bring to
+        compilers and ML hardware now.
+      </p>
+      <p>
+        Most recently I spent a summer on the TIE compiler team at Cadence
+        Design Systems, modernizing a decades-old production C compiler and
+        prototyping an MLIR-based pipeline for one of its optimization
+        stages. I also work as a research assistant in USC's Machine
+        Learning, Health and Biomedicine Lab. I'm AWS certified, have
+        shipped a production ML API on serverless infrastructure, and built
+        a Unix-like OS kernel from scratch in C. Looking for full-time
+        roles starting January 2027; H1B1-eligible.
+      </p>
+    </section>
+
+    <!-- Education Section -->
+    <section>
+      <h2>Education</h2>
+      <p>
+        <strong>University of Southern California</strong>, Los Angeles,
+        California, August 2024 – December 2026
+      </p>
+      <ul>
+        <li>Master of Science in Computer Science, GPA: 3.9/4.0</li>
+      </ul>
+      <p>
+        <strong>Nanyang Technological University</strong>, Singapore, August
+        2020 – May 2024
+      </p>
+      <ul>
+        <li>Honors: Highest Distinction, GPA: 4.6/5.0</li>
+        <li>
+          Bachelor of Engineering in Aerospace Engineering, Second Major in
+          Business
+        </li>
+      </ul>
+
+      <p>
+        <strong>University of California, Berkeley</strong>, Berkeley,
+        California, June 2023 – August 2023
+      </p>
+      <ul>
+        <li>
+          Summer Exchange Program, US-Singapore MFA Scholarship recipient
+        </li>
+      </ul>
+    </section>
+
+    <!-- Skills and Interests Section -->
+    <section>
+      <h2>Skills & Interests</h2>
+      <ul>
+        <li>
+          <strong>Programming:</strong> Python, C, C++, CUDA, Go, Java
+          (Spring Boot), Bash, JavaScript (Node.js), SQL.
+        </li>
+        <li>
+          <strong>Machine Learning & AI:</strong> LoRA fine-tuning,
+          quantization (INT4), agentic pipelines (LangGraph/LangChain),
+          PyTorch, Hugging Face Transformers, TensorFlow, NLP,
+          reinforcement learning.
+        </li>
+        <li>
+          <strong>Compilers & Hardware:</strong> MLIR/LLVM, CUDA kernel
+          optimization, DNN accelerator architecture.
+        </li>
+        <li>
+          <strong>Web Development:</strong> HTML, CSS, RESTful APIs,
+          Node.js, FastAPI.
+        </li>
+        <li>
+          <strong>Cloud & Tools:</strong> AWS (Lambda, API Gateway, EC2),
+          Docker, Git, Linux/Unix.
+        </li>
+        <li>
+          <strong>Certifications:</strong> AWS Certified Solutions
+          Architect – Associate, AWS Certified Cloud Practitioner, Google
+          Data Analytics.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+
+      <p>
+        <strong>DNN Kernels & INT4 Quantization</strong> — USC Hardware
+        Foundations of ML
+      </p>
+      <ul>
+        <li>
+          Built CUDA kernels progressing from naive to
+          shared-memory-tiled matrix multiplication, with memory coalescing
+          and bank-conflict-padding optimizations.
+        </li>
+        <li>
+          Implemented INT4 weight-only quantization for Llama 3.2-1B,
+          achieving ~60% model size reduction with coherent generation
+          preserved.
+        </li>
+      </ul>
+
+      <p>
+        <strong>LLM Fine-tuning for Sentiment Analysis</strong> — Graduate
+        NLP group project
+      </p>
+      <ul>
+        <li>
+          Fine-tuned GPT-2 with LoRA (PyTorch, Hugging Face
+          Transformers/Datasets) on SST-2 and Yelp, and measured the
+          fine-tuning's impact on racial bias via StereoSet benchmarking.
+        </li>
+      </ul>
+
+      <p><strong>Weenix Kernel</strong> — USC Operating Systems</p>
+      <ul>
+        <li>
+          Built a Unix-like OS from a 15,000-line C skeleton with two
+          classmates: kernel threads, process scheduling, and a virtual
+          file system.
+        </li>
+      </ul>
+
+      <p><strong>Housing Tax Credit Application Advisor</strong></p>
+      <ul>
+        <li>
+          Built an agentic pipeline in LangGraph/LangChain pairing a
+          Random Forest classifier with a quantized Llama-3.1-8B model to
+          diagnose weak points in affordable-housing tax-credit
+          applications and suggest fixes.
+        </li>
+      </ul>
+
+      <p><strong>Kidslink Children's Clinic Website</strong></p>
+      <ul>
+        <li>
+          Migrated a 4-branch pediatric clinic's site from Wix to custom
+          code on Vercel, driving 86,000+ page views and 9,000+
+          click-to-call conversions over 5 years while cutting server
+          response time by 50%.
+        </li>
+      </ul>
+
+      <p><strong>USC Free Food Finder</strong></p>
+      <ul>
+        <li>
+          Built a full-stack app (React, Vite, Tailwind, Node.js, Supabase,
+          Vercel) helping USC students find campus events with free food.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Internship Experience Section -->
+    <section>
+      <h2>Internship Experience</h2>
+
+      <p><strong>Cadence Design Systems</strong>, TIE Compiler Team, May – August 2026</p>
+      <ul>
+        <li><strong>Software Engineer Intern</strong></li>
+        <li>
+          Profiled a decades-old production C compiler running at roughly
+          500 billion instructions and led a migration of a proprietary
+          string library to modern C++, hardening Cadence's internal AI
+          coding tool along the way.
+        </li>
+        <li>
+          Cut ~6 billion instructions executed per compiler run (about 1%
+          at production scale) and eliminated roughly 8,000 manual
+          malloc/free pairs across 120+ files, with results strong enough
+          to green-light a follow-on phase integrating MLIR into the
+          compiler frontend.
+        </li>
+      </ul>
+
+      <p>
+        <strong>Machine Learning, Health and Biomedicine Lab, USC</strong>,
+        December 2025 – August 2026
+      </p>
+      <ul>
+        <li><strong>Research Assistant</strong></li>
+        <li>
+          Built a data pipeline for HLA-peptide immunogenicity prediction,
+          cleaning and normalizing allele frequency data from 500+
+          population studies into a common resolution.
+        </li>
+        <li>
+          Established a peptide-matching baseline across 83,000+ proteins,
+          producing a reusable pipeline processing 1,000+ population
+          datasets.
+        </li>
+      </ul>
+
+      <p><strong>Appraise AI</strong>, June – August 2025</p>
+      <ul>
+        <li><strong>Software Engineer Intern</strong></li>
+        <li>
+          Delivered exploratory data analysis and built a logistic
+          regression model to predict funding outcomes for Low-Income
+          Housing Tax Credit applications (78% F1-score).
+        </li>
+        <li>
+          Deployed the model as a FastAPI service on AWS Lambda and API
+          Gateway, pulling in three additional years of historical data.
+        </li>
+      </ul>
+
+      <p>
+        <strong>NTU Satellite Research Centre (SaRC)</strong>, Singapore,
+        January 2023 – June 2023
+      </p>
+      <ul>
+        <li><strong>Mechanical Design Engineer</strong></li>
+        <li>
+          Designed harnessing systems, honeycomb panels, and frame
+          structures with complete BOMs for the ELITE satellite, a $200M
+          VLEO satellite project, helping a 20-member team pass
+          qualification testing.
+        </li>
+        <li>
+          Automated hole-coordinate extraction for honeycomb panels with a
+          Python script that auto-formatted and validated positions to
+          supplier spec, hitting 100% accuracy and becoming the team's
+          standard process.
+        </li>
+      </ul>
+
+      <p><strong>ST Engineering</strong>, Singapore, May 2022 – August 2022</p>
+      <ul>
+        <li><strong>Structure and Design Engineer</strong></li>
+        <li>
+          Designed, 3D-printed, and tested prototypes for a novel UAV
+          recovery system, securing head-of-department approval and
+          continued funding.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Key Accomplishments Section -->
+    <section>
+      <h2>Key Accomplishments</h2>
+
+      <p>
+        <strong>Finalist, Google x NTU Tech4tmr Hackathon</strong>, March
+        2024
+      </p>
+      <ul>
+        <li>
+          Placed 3rd out of 30 teams building a full-stack career-transition
+          web app that suggests relevant jobs and courses, as business
+          manager and technical contributor.
+        </li>
+        <li>
+          Implemented job matching using Vertex AI for NLP, integrated web
+          scraping and external APIs to fetch and analyze data.
+        </li>
+      </ul>
+
+      <p>
+        <strong>3rd Place, Friends of Amateur Rocketry 51025 Competition</strong>, July 2023
+      </p>
+      <ul>
+        <li>
+          Joined a 20-member, multi-university student team as Aerostructures
+          & Recovery lead (later informal communications lead) to become the
+          first Singaporean student team to launch a high-powered rocket,
+          placing 3rd out of 20 international teams.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Leadership and Involvement Section -->
+    <section>
+      <h2>Leadership and Involvement</h2>
+
+      <p>
+        <strong>Hackathons and Product Development Competitions</strong>,
+        August 2021 – March 2024
+      </p>
+      <ul>
+        <li>
+          Completed 7 hackathons and product development competitions,
+          collaborating with 40+ students from different disciplines.
+        </li>
+        <li>
+          Delivered technical presentations and effectively communicated
+          complex ideas, earning recognition for problem-solving and
+          innovation.
+        </li>
+      </ul>
+
+      <p>
+        <strong>Mechanical & Aerospace Engineering Club</strong>, August 2021
+        – August 2022
+      </p>
+      <ul>
+        <li>
+          Led a 10-member team as Business Manager Chair to raise funds,
+          liaise with sponsors, and organize merchandise sales, resulting in a
+          2x revenue increase to $20,000 and enhanced student engagement.
+        </li>
+        <li>
+          Automated order tracking and payment verification systems using
+          software tools, significantly reducing manual errors and increasing
+          operational efficiency.
+        </li>
+      </ul>
+    </section>
+  </div>
+  <script src="index.js"></script>
+</body>
+
 </html>

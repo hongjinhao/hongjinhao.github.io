@@ -1,13 +1,14 @@
 // Frontend Javascript
 
+/* Like button feature disabled until the backend database is working again.
+
 const likeBtn = document.getElementById("likeButton");
 const likeCount = document.getElementById("likeCount");
 
-/* 
     Paths for backend API access during development and in production
     Development is done on vscode preview extension
-    Production is when the frontend is hosted on github io pages 
-    */
+    Production is when the frontend is hosted on github io pages
+
 const PRODUCTION_URL = "https://hongjinhao-github-io-backend.onrender.com";
 const DEV_URL = "http://localhost:8080";
 const BASE_URL =
@@ -15,13 +16,13 @@ const BASE_URL =
     ? DEV_URL
     : // if this script is running on github pages
       PRODUCTION_URL;
-/*
+
     Interactive Like Button: Heart Shape Symbol
-    When pressed, alternate between the two states: on and off. 
+    When pressed, alternate between the two states: on and off.
     Simultaneously, likeCount += 1
     likeBtn has an onclick HTML event that takes in a function
     Our defined function expression changes HTML, set attributes and change classLists
-*/
+
 likeBtn.onclick = function () {
   if (likeBtn.getAttribute("data-liked") == "true") {
     likeBtn.innerHTML = "&#9825;"; // Outlined heart
@@ -75,3 +76,5 @@ async function getLikeCount() {
 }
 
 // getLikeCount();
+
+*/

@@ -106,6 +106,10 @@ section {
 /* Optional: Add space below headings for a cleaner look */
 .sections-container h2 {
   margin-bottom: 10px;
+  background-color: #e0e0e0;
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 4px;
 }
 
 .response-buttons {
